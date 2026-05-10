@@ -1,0 +1,11 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wc-tw-core/invoice-fields",
+  "title": "台灣發票資訊",
+  "category": "woocommerce",
+  "icon": "tickets-alt",
+  "description": "提供統一編號與發票類型選擇，專為 WooCommerce 結帳區塊設計。",
+  "editorScript": "file:../../build/editor.js",
+  "script": "file:../../build/index.js"
+}

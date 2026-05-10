@@ -1,0 +1,121 @@
+/* WC TW Core — Checkout stylesheet */
+
+/* 隱藏國家欄位（台灣商店預設 TW） */
+.woocommerce-checkout p#billing_country_field,
+.woocommerce-checkout p#shipping_country_field {
+	display: none !important;
+}
+
+/* 統編發票區塊：預設隱藏，勾選 checkbox 後展開 */
+.woocommerce-checkout .wctw-invoice-field {
+	display: none;
+}
+.woocommerce-checkout .wctw-invoice-field.wctw-visible {
+	display: block;
+}
+
+/* 鄉鎮市區 select：與縣市 select2 / native select 樣式一致 */
+.woocommerce-checkout #billing_city,
+.woocommerce-checkout #shipping_city {
+	width: 100%;
+	height: auto;
+	padding: 0.6180469716em;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 1em;
+	font-family: inherit;
+	color: inherit;
+	box-sizing: border-box;
+	appearance: auto;
+	-webkit-appearance: auto;
+}
+
+/* select2 container 同步寬度 */
+.woocommerce-checkout #billing_city_field .select2-container,
+.woocommerce-checkout #shipping_city_field .select2-container {
+	width: 100% !important;
+}
+
+/* 郵遞區號：較窄、右側配對縣市 */
+.woocommerce-checkout #billing_postcode_field,
+.woocommerce-checkout #shipping_postcode_field {
+	/* form-row-last 已處理寬度，這裡只補視覺輔助 */
+}
+
+/* 統編查詢提示文字（統編欄位下方） */
+#wctw-taxid-hint {
+	display: block;
+	margin-top: 4px;
+	font-size: 0.85em;
+	line-height: 1.4;
+}
+
+/* 郵遞區號：placeholder 顏色略淺，讓「自動帶入」提示感覺像 hint */
+.woocommerce-checkout #billing_postcode::placeholder,
+.woocommerce-checkout #shipping_postcode::placeholder {
+	color: #aaa;
+	font-style: italic;
+}
+
+/* 公司名稱：placeholder 同樣處理 */
+.woocommerce-checkout #billing_company_title::placeholder {
+	color: #aaa;
+	font-style: italic;
+}
+
+/* 隱藏的 need_invoice checkbox（由 invoice_type select 控制） */
+.woocommerce-checkout p#billing_need_invoice_field {
+	display: none !important;
+}
+
+/* 載具/捐贈碼欄位：預設隱藏，JS 依發票類型顯示 */
+.woocommerce-checkout p#billing_carrier_number_field {
+	display: none;
+}
+
+/* 發票類型 select 樣式 */
+.woocommerce-checkout #billing_invoice_type {
+	width: 100%;
+	padding: 0.6180469716em;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 1em;
+	font-family: inherit;
+	color: inherit;
+	box-sizing: border-box;
+	appearance: auto;
+	-webkit-appearance: auto;
+}
+
+/* 即時驗證提示顏色過渡 */
+#billing_phone_hint,
+#billing_carrier_number_hint {
+	transition: color 0.2s;
+	line-height: 1.4;
+}
+
+/* 訂單清單標籤樣式 */
+.wctw-tags-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	align-items: center;
+	margin-top: 5px;
+}
+.wctw-tag {
+	display: inline-block;
+	padding: 2px 6px;
+	border-radius: 4px;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 1.2;
+	white-space: nowrap;
+	color: #fff;
+}
+.wctw-tag-taxid   { background-color: #1e3a5f; }
+.wctw-tag-carrier { background-color: #00a32a; }
+.wctw-tag-donate  { background-color: #f0821b; }
+.wctw-tag-marketing { background-color: #9b59b6; }
+

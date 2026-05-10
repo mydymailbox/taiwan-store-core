@@ -1,0 +1,598 @@
+# Copyright (C) 2026 Taiwan Store Core
+# This file is distributed under the same license as the Taiwan Store Core plugin.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Taiwan Store Core 1.0.1\n"
+"Report-Msgid-Bugs-To: https://github.com/your-org/wc-tw-core/issues\n"
+"POT-Creation-Date: 2026-05-08T09:57+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Chinese (Traditional) <zh-tw@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: wc-tw-core\n"
+
+#: includes/modules/checkout-tw/class-fields.php:65
+#: includes/modules/checkout-tw/class-locale.php:155
+msgid "/ABC+123、AB12345678901234 或 3–7 碼捐贈碼"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-fields.php:75
+msgid "8 碼數字"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-locale.php:163
+msgid "8 碼數字，公司戶必填"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-order-meta.php:134
+msgid "== 發票資訊 =="
+msgstr ""
+
+#: includes/modules/checkout-tw/class-invoice-export.php:72
+msgid "Email"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:675
+msgid "WC TW Core"
+msgstr ""
+
+#: includes/class-plugin.php:216
+msgid "WC TW Core 偵測到可能衝突的外掛："
+msgstr ""
+
+#: wc-tw-core.php:42
+msgid "WC TW Core 需要 WooCommerce 外掛才能運作，請先安裝並啟用 WooCommerce。"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:676
+msgid "WooCommerce 台灣在地化核心外掛 — 結帳在地化 × 規則引擎"
+msgstr ""
+
+#. %s: plugin version number */
+#: includes/admin/class-settings-page.php:679
+#, php-format
+msgid "v%s"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-locale.php:144
+msgid "─ 請選擇 ─"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:34
+msgid "一般"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:826
+msgid "今天尚無日誌，請啟用 Debug 日誌後重新整理。"
+msgstr ""
+
+#. %s: link to payment rules */
+#: includes/admin/class-settings-page.php:36
+#: includes/admin/class-settings-page.php:708
+msgid "付款規則"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:759
+msgid "付款規則引擎"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:65
+msgid "以「前綴 + YYYYMMDD + 流水號」格式顯示訂單編號"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:72
+msgid "例如填入 <code>TW</code> 則編號為 TW20260508-0001。留空則無前綴。"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:775
+msgid "依條件過濾運送方式，適用外島限制或特定地區規則。"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-fields.php:51
+#: includes/modules/checkout-tw/class-invoice-export.php:82
+#: includes/modules/checkout-tw/class-locale.php:145
+msgid "個人電子發票（雲端）"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-fields.php:81
+msgid "公司 / 機構名稱（公司戶必填）"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-order-meta.php:68
+msgid "公司/機構："
+msgstr ""
+
+#: includes/modules/checkout-tw/class-invoice-export.php:86
+msgid "公司三聯式（統編）"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-fields.php:55
+#: includes/modules/checkout-tw/class-locale.php:149
+msgid "公司三聯式（需統編）"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-invoice-export.php:76
+#: includes/modules/checkout-tw/class-locale.php:83
+#: includes/modules/checkout-tw/class-locale.php:171
+#: includes/modules/checkout-tw/class-order-meta.php:110
+#: includes/modules/checkout-tw/class-order-meta.php:163
+msgid "公司名稱"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-order-meta.php:143
+msgid "公司名稱："
+msgstr ""
+
+#: includes/modules/checkout-tw/class-locale.php:172
+msgid "公司戶必填（可由統編自動帶入）"
+msgstr ""
+
+#. %s: link to checkout settings */
+#: includes/admin/class-settings-page.php:697
+msgid "前往「<a href=\"%1$s\">%2$s</a>」啟用統一編號欄位、手機格式驗證、郵遞區號自動填入等結帳選項。"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:735
+msgid "功能模組"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:764
+msgid "動作：隱藏指定付款閘道"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:778
+msgid "動作：隱藏指定運送方式"
+msgstr ""
+
+#: includes/admin/class-rules-ui.php:42
+msgid "匯入規則 (JSON)"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-invoice-export.php:27
+msgid "匯出發票資料 (CSV)"
+msgstr ""
+
+#: includes/admin/class-rules-ui.php:41
+msgid "匯出規則 (JSON)"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:793
+msgid "友善錯誤訊息顯示於購物車與結帳頁"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-fields.php:85
+msgid "可由統編自動帶入（Classic Checkout）"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:25
+msgid "台灣在地化"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:743
+msgid "台灣結帳在地化"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-locale.php:45
+msgid "名字"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:100
+msgid "啟用 Debug 日誌"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:60
+msgid "啟用後，新訂單將以「前綴 + 日期（YYYYMMDD）+ 流水號」格式取代預設的 WordPress Post ID 顯示，例如：TW20260508-0001。原始訂單 ID 不受影響。"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:64
+msgid "啟用自訂訂單編號"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:791
+msgid "單一商品最大購買數量"
+msgstr ""
+
+#. %s: link to payment rules */
+#: includes/admin/class-settings-page.php:706
+msgid "在「<a href=\"%1$s\">%2$s</a>」新增條件規則，讓特定情況下自動隱藏不適用的付款方式。"
+msgstr ""
+
+#. %s: link to shipping rules */
+#: includes/admin/class-settings-page.php:715
+msgid "在「<a href=\"%1$s\">%2$s</a>」設定外島或特定縣市不可使用某運送方式。"
+msgstr ""
+
+#. %s: link to cart rules */
+#: includes/admin/class-settings-page.php:724
+msgid "在「<a href=\"%1$s\">%2$s</a>」設定最低消費、單品數量上限或禁止商品組合。"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:788
+msgid "在結帳前驗證購物車內容，阻止不符規則的訂單成立。"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:122
+msgid "在結帳頁帳單資訊新增「統一編號」和「公司抬頭」欄位"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:129
+msgid "填寫統一編號時驗證格式（8 碼、MOD11 加權）"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-locale.php:40
+msgid "姓氏"
+msgstr ""
+
+#: includes/helpers/class-nonce.php:21
+msgid "安全性驗證失敗，請重新整理後再試。"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-invoice-export.php:71
+msgid "客戶姓名"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:745
+msgid "將 WooCommerce 結帳頁調整為台灣習慣的地址欄位與表單驗證流程。"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:101
+msgid "將除錯訊息寫入 WooCommerce 日誌（wc-tw-core 來源），可至「日誌」分頁查看。"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-invoice-export.php:78
+msgid "幣別"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-locale.php:78
+msgid "幾樓、幾室、公寓（選填）"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:690
+msgid "快速上手"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-fields.php:52
+#: includes/modules/checkout-tw/class-invoice-export.php:83
+#: includes/modules/checkout-tw/class-locale.php:146
+#: includes/modules/checkout-tw/class-order-meta.php:57
+msgid "手機條碼"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-validation.php:54
+#: includes/modules/checkout-tw/class-validation.php:99
+msgid "手機條碼格式：/ 開頭 + 7 碼（數字、大寫英文、+ - .）。"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-locale.php:99
+msgid "手機號碼"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-validation.php:124
+#: includes/modules/checkout-tw/class-validation.php:139
+msgid "手機號碼格式不正確，請輸入有效的台灣行動電話號碼（例：0912345678）。"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:751
+msgid "手機號碼格式驗證（09xxxxxxxx）"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-fields.php:54
+#: includes/modules/checkout-tw/class-invoice-export.php:85
+#: includes/modules/checkout-tw/class-locale.php:148
+#: includes/modules/checkout-tw/class-order-meta.php:59
+msgid "捐贈碼"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-validation.php:62
+#: includes/modules/checkout-tw/class-validation.php:107
+msgid "捐贈碼為 3–7 碼數字。"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:39
+msgid "日誌"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:790
+msgid "最低消費金額限制"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:833
+msgid "最近 200 行日誌"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-fields.php:155
+#: includes/modules/checkout-tw/class-fields.php:168
+msgid "查無此統一編號"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-fields.php:125
+msgid "查無此統編"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-fields.php:124
+msgid "查詢中…"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-fields.php:126
+msgid "查詢失敗，請手動填寫"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-fields.php:163
+msgid "查詢失敗，請稍後再試"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-fields.php:141
+msgid "查詢過於頻繁，請稍後再試"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:777
+msgid "條件：收件縣市、商品 / 分類、訂單小計"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:763
+msgid "條件：訂單金額、商品 / 分類、配送方式、收件地址"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-locale.php:77
+msgid "樓層 / 室"
+msgstr ""
+
+#: includes/admin/class-rules-ajax.php:139
+msgid "權限不足"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:82
+msgid "每日流水號的最少顯示位數（不足時補零）。預設 4 位，如 0001。"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:766
+msgid "每次隱藏事件均寫入除錯日誌（可追蹤排查）"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:81
+msgid "流水號位數"
+msgstr ""
+
+#: includes/admin/class-rules-ajax.php:144
+msgid "無效的規則類型"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-order-meta.php:50
+#: includes/modules/checkout-tw/class-order-meta.php:98
+#: includes/modules/checkout-tw/class-order-meta.php:151
+msgid "發票資訊"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-fields.php:46
+#: includes/modules/checkout-tw/class-invoice-export.php:73
+#: includes/modules/checkout-tw/class-locale.php:139
+#: includes/modules/checkout-tw/class-order-meta.php:102
+#: includes/modules/checkout-tw/class-order-meta.php:155
+msgid "發票類型"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-order-meta.php:53
+#: includes/modules/checkout-tw/class-order-meta.php:135
+msgid "發票類型："
+msgstr ""
+
+#: includes/admin/class-settings-page.php:802
+msgid "相容性與技術規格"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:792
+msgid "禁止特定商品同時購買（例：A + B 不可同購）"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:765
+msgid "範例：購物車金額 &lt; NT$100 時隱藏貨到付款"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:779
+msgid "範例：連江縣 / 澎湖縣 / 金門縣不顯示超商取貨"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:116
+msgid "結帳欄位設定"
+msgstr ""
+
+#. %s: link to checkout settings */
+#: includes/admin/class-settings-page.php:35
+#: includes/admin/class-settings-page.php:699
+msgid "結帳設定"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-invoice-export.php:75
+#: includes/modules/checkout-tw/class-locale.php:162
+#: includes/modules/checkout-tw/class-order-meta.php:107
+#: includes/modules/checkout-tw/class-order-meta.php:160
+msgid "統一編號"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-validation.php:44
+#: includes/modules/checkout-tw/class-validation.php:89
+msgid "統一編號格式或檢查碼錯誤，請輸入有效的 8 碼統一編號。"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:749
+msgid "統一編號（8 碼、MOD11 加權驗證）與公司抬頭欄位"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-fields.php:71
+msgid "統一編號（公司戶必填）"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-order-meta.php:65
+#: includes/modules/checkout-tw/class-order-meta.php:140
+msgid "統一編號："
+msgstr ""
+
+#: includes/modules/checkout-tw/class-fields.php:148
+msgid "統編格式錯誤"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:135
+msgid "統編自動查詢公司名稱"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:752
+msgid "統編與公司抬頭隨訂單儲存（HPOS 相容）"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-locale.php:52
+msgid "縣市"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:747
+msgid "縣市 / 鄉鎮市區連動下拉選單（22 縣市、368 鄉鎮區）"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-invoice-export.php:84
+#: includes/modules/checkout-tw/class-order-meta.php:58
+msgid "自然人憑證"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-validation.php:58
+#: includes/modules/checkout-tw/class-validation.php:103
+msgid "自然人憑證格式：2 碼大寫英文 + 14 碼數字。"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-fields.php:53
+#: includes/modules/checkout-tw/class-locale.php:147
+msgid "自然人憑證條碼"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:58
+msgid "自訂訂單編號"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-locale.php:72
+msgid "街道、路、段、巷、弄、號"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-invoice-export.php:70
+msgid "訂單日期"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-invoice-export.php:69
+msgid "訂單編號"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:71
+msgid "訂單編號前綴"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-invoice-export.php:77
+msgid "訂單金額"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-locale.php:71
+msgid "詳細地址"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:33
+msgid "說明"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-validation.php:47
+#: includes/modules/checkout-tw/class-validation.php:92
+msgid "請輸入公司 / 機構名稱。"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-validation.php:83
+msgid "請選擇發票類型。"
+msgstr ""
+
+#. %s: link to cart rules */
+#: includes/admin/class-settings-page.php:38
+#: includes/admin/class-settings-page.php:726
+msgid "購物車規則"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:786
+msgid "購物車規則引擎"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-locale.php:154
+msgid "載具 / 捐贈碼"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-fields.php:61
+msgid "載具 / 捐贈碼（依發票類型填寫）"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-invoice-export.php:74
+msgid "載具/捐贈碼"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-order-meta.php:60
+#: includes/modules/checkout-tw/class-order-meta.php:104
+#: includes/modules/checkout-tw/class-order-meta.php:157
+msgid "載具號碼"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-order-meta.php:137
+msgid "載具號碼："
+msgstr ""
+
+#: includes/admin/class-settings-page.php:136
+msgid "輸入統一編號後自動呼叫 API 查詢並帶入公司名稱"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:750
+msgid "輸入統編後自動查詢公司名稱（政府開放資料 API）"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:761
+msgid "透過條件規則動態隱藏不適用的付款方式，無需修改程式碼。"
+msgstr ""
+
+#. %s: link to shipping rules */
+#: includes/admin/class-settings-page.php:37
+#: includes/admin/class-settings-page.php:717
+msgid "運費規則"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:773
+msgid "運費規則引擎"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-locale.php:59
+msgid "選完鄉鎮市區自動帶入"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:748
+msgid "選擇鄉鎮市區後自動填入 3 碼郵遞區號"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:143
+msgid "選擇鄉鎮市區後自動填入郵遞區號"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-locale.php:58
+msgid "郵遞區號"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:142
+msgid "郵遞區號自動填入"
+msgstr ""
+
+#: includes/modules/checkout-tw/class-locale.php:65
+msgid "鄉鎮市區"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:95
+msgid "除錯日誌"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:121
+msgid "顯示統一編號欄位"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:128
+msgid "驗證統一編號"
+msgstr ""

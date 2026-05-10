@@ -1,0 +1,839 @@
+/* WC TW Core — Rules Admin UI */
+
+/* ── Reset & base ─────────────────────────────────────────────────────────── */
+#wc-tw-rules-app {
+    max-width: 960px;
+    margin-top: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ── Page header ──────────────────────────────────────────────────────────── */
+.wctw-page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #e8eaed;
+}
+
+.wctw-page-header h2 {
+    margin: 0;
+    font-size: 1.25em;
+    color: #1d2327;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wctw-page-header h2 .dashicons {
+    color: #2271b1;
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+}
+
+.wctw-badge {
+    background: #2271b1;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 10px;
+    line-height: 1.6;
+}
+
+/* ── Primary button ───────────────────────────────────────────────────────── */
+.wctw-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #2271b1;
+    color: #fff !important;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.15s;
+    line-height: 1.4;
+}
+.wctw-btn-primary:hover {
+    background: #135e96;
+    color: #fff !important;
+}
+.wctw-btn-primary .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    margin-top: 1px;
+}
+
+.wctw-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #fff;
+    color: #2271b1 !important;
+    border: 1px solid #2271b1;
+    border-radius: 4px;
+    padding: 7px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.15s;
+    line-height: 1.4;
+}
+.wctw-btn-secondary:hover {
+    background: #f0f6ff;
+}
+
+.wctw-btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: transparent;
+    color: #50575e;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s;
+    line-height: 1.4;
+}
+.wctw-btn-ghost:hover {
+    background: #f6f7f7;
+    border-color: #8c8f94;
+    color: #1d2327;
+}
+.wctw-btn-ghost .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    margin-top: 1px;
+}
+
+.wctw-btn-danger {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: transparent;
+    color: #d63638;
+    border: 1px solid #d63638;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s;
+    line-height: 1.4;
+}
+.wctw-btn-danger:hover {
+    background: #fef0f0;
+}
+.wctw-btn-danger .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    margin-top: 1px;
+}
+
+/* ── Empty state ──────────────────────────────────────────────────────────── */
+.wctw-empty-state {
+    text-align: center;
+    padding: 52px 24px;
+    background: #fff;
+    border: 2px dashed #c3c4c7;
+    border-radius: 8px;
+    color: #646970;
+}
+.wctw-empty-state .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    color: #c3c4c7;
+    margin-bottom: 12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.wctw-empty-state p {
+    margin: 4px 0 16px;
+    font-size: 14px;
+}
+
+/* ── Rule cards ───────────────────────────────────────────────────────────── */
+.wctw-rules-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.wctw-rule-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #3b82f6;
+    border-radius: 12px;
+    padding: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.wctw-rule-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+.wctw-rule-card.is-disabled {
+    border-left-color: #cbd5e1;
+    opacity: 0.6;
+}
+
+.wctw-rule-card-header {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    gap: 16px;
+    border-bottom: 1px solid #f1f5f9;
+    background: #ffffff;
+}
+
+.wctw-rule-name {
+    flex: 1;
+    font-weight: 600;
+    font-size: 14px;
+    color: #1d2327;
+}
+
+.wctw-rule-card.is-disabled .wctw-rule-name {
+    color: #787c82;
+}
+
+.wctw-rule-card-body {
+    display: flex;
+    gap: 0;
+    padding: 0;
+}
+
+.wctw-rule-section {
+    flex: 1;
+    padding: 12px 16px;
+    border-right: 1px solid #f0f1f2;
+    min-width: 0;
+}
+.wctw-rule-section:last-child {
+    border-right: none;
+}
+
+.wctw-rule-section-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #787c82;
+    margin: 0 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.wctw-rule-section-title .dashicons {
+    font-size: 13px;
+    width: 13px;
+    height: 13px;
+}
+
+.wctw-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.wctw-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+.wctw-tag.cond {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #dbeafe;
+}
+.wctw-tag.action {
+    background: #fff7ed;
+    color: #c2410c;
+    border: 1px solid #ffedd5;
+}
+.wctw-tag.empty {
+    background: #f8fafc;
+    color: #94a3b8;
+    font-style: italic;
+    border: 1px solid #f1f5f9;
+}
+.wctw-tag .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+.wctw-rule-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+/* ── Toggle switch ────────────────────────────────────────────────────────── */
+.wctw-switch {
+    position: relative;
+    display: inline-block;
+    width: 38px;
+    height: 22px;
+    flex-shrink: 0;
+}
+.wctw-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+.wctw-switch-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #c3c4c7;
+    border-radius: 22px;
+    transition: 0.2s;
+}
+.wctw-switch-slider::before {
+    content: '';
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    top: 3px;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.2s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.wctw-switch input:checked + .wctw-switch-slider {
+    background: #10b981;
+}
+.wctw-switch input:checked + .wctw-switch-slider::before {
+    transform: translateX(16px);
+}
+
+/* ── Status pill ──────────────────────────────────────────────────────────── */
+.wctw-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+.wctw-pill.on {
+    background: #d1e7dd;
+    color: #0a3622;
+}
+.wctw-pill.off {
+    background: #f0f0f1;
+    color: #646970;
+}
+.wctw-pill .dashicons {
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+}
+
+/* ── Modal ────────────────────────────────────────────────────────────────── */
+.wctw-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 100000;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 32px;
+    overflow-y: auto;
+}
+.wctw-overlay.open {
+    display: flex;
+}
+
+.wctw-modal {
+    background: #fff;
+    width: 700px;
+    max-width: 96vw;
+    border-radius: 6px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.22);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.wctw-modal-head {
+    padding: 18px 22px 14px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f8f9fa;
+    border-radius: 6px 6px 0 0;
+}
+.wctw-modal-head h3 {
+    margin: 0;
+    flex: 1;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.wctw-modal-head h3 .dashicons {
+    color: #2271b1;
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+.wctw-modal-x {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #787c82;
+    font-size: 20px;
+    line-height: 1;
+    padding: 2px 6px;
+    border-radius: 3px;
+    transition: all 0.15s;
+}
+.wctw-modal-x:hover {
+    background: #f0f0f1;
+    color: #d63638;
+}
+
+.wctw-modal-body {
+    padding: 22px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.wctw-modal-foot {
+    padding: 16px 24px;
+    border-top: 1px solid #f1f5f9;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #ffffff;
+    border-radius: 0 0 16px 16px;
+}
+
+/* ── UIUX Optimization Elements ────────────────────────────────────────── */
+
+/* 1. Rule Summary Box */
+.wctw-summary-box {
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+.wctw-summary-box .dashicons {
+    color: #0284c7;
+    margin-top: 2px;
+}
+.wctw-summary-content {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #075985;
+}
+.wctw-summary-placeholder {
+    color: #94a3b8;
+    font-style: italic;
+}
+.wctw-summary-val {
+    font-weight: 700;
+    color: #0369a1;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* 2. Visual Component Picker */
+.wctw-picker-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 200000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.wctw-picker-overlay.open { display: flex; }
+
+.wctw-picker-modal {
+    background: #fff;
+    width: 600px;
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    animation: wctw-modal-in 0.3s ease-out;
+}
+@keyframes wctw-modal-in {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.wctw-picker-head {
+    padding: 20px 24px;
+    border-bottom: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wctw-picker-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 12px;
+    padding: 24px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+.wctw-picker-item {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.wctw-picker-item:hover {
+    border-color: #3b82f6;
+    background: #eff6ff;
+    transform: translateY(-3px);
+}
+.wctw-picker-item .dashicons {
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
+    color: #64748b;
+}
+.wctw-picker-item:hover .dashicons { color: #3b82f6; }
+.wctw-picker-item-label {
+    font-weight: 600;
+    font-size: 13px;
+    color: #1e293b;
+}
+.wctw-picker-item-desc {
+    font-size: 11px;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+/* 3. Steps */
+.wctw-step-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+.wctw-step-num {
+    background: #334155;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* 4. Improved Inputs */
+.wctw-modal input[type="text"], 
+.wctw-modal input[type="number"], 
+.wctw-modal select {
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 13px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+.wctw-modal input:focus, .wctw-modal select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    outline: none;
+}
+.wctw-modal-foot .spacer {
+    flex: 1;
+}
+
+/* ── Form fields ──────────────────────────────────────────────────────────── */
+.wctw-form-row {
+    margin-bottom: 18px;
+}
+.wctw-form-row label {
+    display: block;
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #1d2327;
+}
+.wctw-form-row label .wctw-required {
+    color: #d63638;
+    margin-left: 2px;
+}
+.wctw-form-row input[type="text"],
+.wctw-form-row input[type="number"],
+.wctw-form-row select {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+.wctw-form-row .wctw-hint {
+    display: block;
+    font-size: 12px;
+    color: #787c82;
+    margin-top: 4px;
+}
+
+.wctw-name-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+}
+.wctw-name-row .wctw-form-row {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+/* ── Conditions / Actions block ───────────────────────────────────────────── */
+.wctw-block {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 18px;
+    overflow: hidden;
+}
+
+.wctw-block-head {
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    background: #f0f1f2;
+    border-bottom: 1px solid #e0e0e0;
+    gap: 8px;
+}
+.wctw-block-head h4 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1d2327;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.wctw-block-head h4 .dashicons {
+    font-size: 15px;
+    width: 15px;
+    height: 15px;
+    color: #646970;
+}
+.wctw-block-hint {
+    font-size: 11px;
+    color: #787c82;
+    font-weight: 400;
+}
+
+.wctw-block-body {
+    padding: 12px 14px;
+}
+
+.wctw-block-empty {
+    color: #787c82;
+    font-size: 12px;
+    font-style: italic;
+    margin: 4px 0 8px;
+}
+
+/* ── Single condition / action row ───────────────────────────────────────── */
+.wctw-item-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    transition: box-shadow 0.15s;
+}
+.wctw-item-row:hover {
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.wctw-item-type-badge {
+    flex-shrink: 0;
+    background: #e8f0fe;
+    color: #1557b0;
+    border-radius: 3px;
+    padding: 3px 8px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    margin-top: 5px;
+}
+.wctw-action-row-wrap .wctw-item-type-badge {
+    background: #fce8e6;
+    color: #b31412;
+}
+
+.wctw-item-fields {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+}
+.wctw-item-fields select,
+.wctw-item-fields input[type="text"],
+.wctw-item-fields input[type="number"] {
+    margin: 0;
+    font-size: 13px;
+}
+.wctw-item-fields select[multiple] {
+    min-width: 160px;
+    font-size: 13px;
+}
+.wctw-item-fields .field-unit {
+    color: #646970;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+.wctw-item-rm {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    color: #bbbfc4;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    padding: 3px 4px;
+    border-radius: 3px;
+    margin-top: 2px;
+    transition: color 0.15s;
+}
+.wctw-item-rm:hover {
+    color: #d63638;
+}
+
+.wctw-add-item-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 6px;
+    border-top: 1px dashed #ddd;
+    margin-top: 4px;
+}
+.wctw-add-item-row select {
+    flex: 1;
+    max-width: 240px;
+    font-size: 13px;
+}
+
+/* ── Spinner ──────────────────────────────────────────────────────────────── */
+.wctw-spinner {
+    display: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #c3c4c7;
+    border-top-color: #2271b1;
+    border-radius: 50%;
+    animation: wctw-spin 0.7s linear infinite;
+    flex-shrink: 0;
+}
+.wctw-spinner.active {
+    display: inline-block;
+}
+@keyframes wctw-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ── Toast notice ─────────────────────────────────────────────────────────── */
+.wctw-toast {
+    display: none;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 200000;
+    background: #1d2327;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 320px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.2s, transform 0.2s;
+}
+.wctw-toast.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+.wctw-toast.success { background: #00a32a; }
+.wctw-toast.error   { background: #d63638; }
+.wctw-toast .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* ── Divider ──────────────────────────────────────────────────────────────── */
+.wctw-divider {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 18px 0;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+@media (max-width: 780px) {
+    .wctw-rule-card-body {
+        flex-direction: column;
+    }
+    .wctw-rule-section {
+        border-right: none;
+        border-bottom: 1px solid #f0f1f2;
+    }
+    .wctw-name-row {
+        flex-direction: column;
+    }
+}
